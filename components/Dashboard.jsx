@@ -5,14 +5,14 @@ export default class Dashboard extends Component {
 		let succ = [];
 		if (this.props.data.Succ != null) {
 			for (let i = 0; i < this.props.data.Succ.length; ++i) {
-				succ.push(<div key={i}><pre>{i + 1}:{JSON.stringify(this.props.data.Succ[i], null, 2)}</pre></div>)
+				succ.push(<div key={"Succ" + i}><pre>{i + 1}:{JSON.stringify(this.props.data.Succ[i], null, 2)}</pre></div>)
 			}
 		}
 		
 		let net = [];
 		if (this.props.data.Net != null) {
 			for (let i = 0; i < this.props.data.Net.length; ++i) {
-				succ.push(<div key={i}><pre>{i + 1}:{JSON.stringify(this.props.data.Net[i], null, 2)}</pre></div>)
+				net.push(<div key={"Net" + i}><pre>{i + 1}:{JSON.stringify(this.props.data.Net[i], null, 2)}</pre></div>)
 			}
 		}
 		
@@ -20,7 +20,7 @@ export default class Dashboard extends Component {
 		let bad = [];
 		if (this.props.data.Bad != null) {
 			for (let i = 0; i < this.props.data.Bad.length; ++i) {
-				succ.push(<div key={i}><pre>{i + 1}:{JSON.stringify(this.props.data.Bad[i], null, 2)}</pre></div>)
+				bad.push(<div key={"Bad" + i}><pre>{i + 1}:{JSON.stringify(this.props.data.Bad[i], null, 2)}</pre></div>)
 			}
 		}
 		
